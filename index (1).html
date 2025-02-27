@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELLA DIGITAL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: #121212;
+            text-align: center;
+            overflow-x: hidden;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(45deg, #002080, #0040ff);
+            padding: 25px;
+            font-size: 26px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+            animation: gradientShift 4s infinite alternate;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes gradientShift {
+            0% { background: linear-gradient(45deg, #002080, #0040ff); }
+            100% { background: linear-gradient(45deg, #0040ff, #002080); }
+        }
+
+        /* Welcome Message */
+        .welcome-message {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+        }
+
+        .welcome-message h2 {
+            color: #00ffcc;
+        }
+
+        /* Efek Floating dan Box */
+        .box {
+            background: linear-gradient(135deg, #002080, #0040ff);
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: floating 3s ease-in-out infinite alternate;
+            color: white;
+            position: relative;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-5px); }
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 255, 0.5);
+        }
+
+        .box h3 {
+            font-size: 22px;
+        }
+
+        .box p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+
+        /* Tombol Beli */
+        .btn {
+            display: inline-block;
+            background: #00ffcc;
+            color: #121212;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 255, 204, 0.4);
+        }
+
+        .btn:hover {
+            background: #00cc99;
+            transform: scale(1.1);
+        }
+
+        .btn:active {
+            transform: scale(0.9);
+            box-shadow: 0 3px 10px rgba(0, 255, 204, 0.3);
+        }
+
+        /* Efek Gelombang */
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+            animation: waveAnimation 6s infinite alternate ease-in-out;
+        }
+
+        @keyframes waveAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>CELLA DIGITAL</h1>
+        <div class="description">Layanan VPS murah, cepat, dan berkualitas tinggi untuk kebutuhan Anda.</div>
+    </div>
+
+    <div class="welcome-message">
+        <h2>Kenapa Memilih Kami?</h2>
+        <p>Kami menyediakan VPS dengan harga terjangkau, performa terbaik, dan layanan pelanggan yang responsif.</p>
+    </div>
+
+    <div class="content">
+        <h2>VPS</h2>
+
+        <div class="box">
+            <h3>BASIC</h3>
+            <p class="price">Rp 20.000</p>
+            <p>2GB RAM</p>
+            <p>1 CORE CPU</p>
+            <a href="https://t.me/BirdCella" class="btn">TELEGRAM</a>
+            <a href="https://wa.me/BirdCella" class="btn">WHATSAPP</a>
+        </div>
+
+        <div class="box">
+            <h3>BASIC</h3>
+            <p class="price">Rp 30.000</p>
+            <p>4GB RAM</p>
+            <p>2 CORE CPU</p>
+            <a href="https://t.me/BirdCella" class="btn">TELEGRAM</a>
+            <a href="https://wa.me/BirdCella" class="btn">WHATSAPP</a>
+        </div>
+
+        <div class="box">
+            <h3>BASIC</h3>
+            <p class="price">Rp 40.000</p>
+            <p>8GB RAM</p>
+            <p>4 CORE CPU</p>
+            <a href="https://t.me/BirdCella" class="btn">TELEGRAM</a>
+            <a href="https://wa.me/BirdCella" class="btn">WHATSAPP</a>
+        </div>
+        
+        <div class="box">
+            <h3>BASIC</h3>
+            <p class="price">Rp 55.000</p>
+            <p>16GB RAM</p>
+            <p>4 CORE CPU</p>
+            <a href="https://t.me/BirdCella" class="btn">TELEGRAM</a>
+            <a href="https://wa.me/BirdCella" class="btn">WHATSAPP</a>
+        </div>
+                
+    </div>
+    
+
+    <div class="content">
+        <h2>SCRIPT DDOS</h2>
+
+        <div class="box">
+            <h3>CNC + API</h3>
+            <p class="price">Rp 45.000</p>
+            <p class="no-encrypt">Rp 60.000</p>
+            <p>FREE TUTOR</p>
+            <a href="https://t.me/BirdCella" class="btn">TELEGRAM</a>
+            <a href="https://wa.me/BirdCella" class="btn">WHATSAPP</a>
+        </div>
+
+        <div class="box">
+            <h3>TOOLS DDOS</h3>
+            <p class="price">Rp 30.000</p>
+            <p>FREE TUTOR</p>
+            <a href="https://t.me/BirdCella" class="btn">TELEGRAM</a>
+            <a href="https://wa.me/BirdCella" class="btn">WHATSAPP</a>
+        </div>
+
+    </div>
+
+    <!-- Efek Gelombang -->
+    <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#0040ff" fill-opacity="0.7" d="M0,256L48,234.7C96,213,192,171,288,176C384,181,480,235,576,245.3C672,256,768,224,864,202.7C960,181,1056,171,1152,186.7C1248,203,1344,245,1392,266.7L1440,288V320H0Z"></path>
+    </svg>
+
+</body>
+</html>
